@@ -152,7 +152,7 @@ var SplitComponent = (function () {
     SplitComponent.prototype.refreshStyleSizes = function () {
         var visibleAreas = this.visibleAreas;
         var f = this.gutterSize * this.nbGutters / visibleAreas.length;
-        visibleAreas.forEach(function (a) { return a.component.setStyle('flex-basis', "calc( " + a.size + "% - " + f + "px )"); });
+        visibleAreas.forEach(function (a) { return a.component.setStyle('flex-basis', a.size + "%"); });
     };
     SplitComponent.prototype.startDragging = function (startEvent, gutterOrder) {
         var _this = this;
